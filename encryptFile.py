@@ -1,14 +1,11 @@
-from tkinter import Tk, Entry, Button, Radiobutton, Label, IntVar, StringVar, Checkbutton
+from tkinter import Tk, Button, Radiobutton, Label, IntVar, Checkbutton
 import tkinter
 import tkinter.font as tkFont
 import os
 import base64
 from tkinter.filedialog import askopenfilename, askdirectory
 
-
-
 e = 0
-
 
 def chooseFile():
     global path
@@ -18,15 +15,8 @@ def chooseDir():
     global path
     path = askdirectory()
 
-
-
-
-
-
-
 def encode():
     global var1
-    
     if e == 1:
         chooseDir()
         dire = r'{}'.format(path)
@@ -114,10 +104,7 @@ def decode():
                     with open (file, '+wb') as imagem:
                         ir = imagem.write(imagem64)
                 except:
-                    pass
-
-
-                    
+                    pass               
     janela.destroy()
 
 def p():
@@ -127,6 +114,7 @@ def p():
 def f():
     global e
     e = 0
+    
 def d():
     global r
     r = 1
