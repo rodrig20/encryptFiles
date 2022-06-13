@@ -2,8 +2,6 @@ from cryptography.fernet import Fernet
 from tkinter import filedialog
 import os
 
-
-
 def codificar(data):
     global c
     txt = c.encrypt(data.encode()).decode()
